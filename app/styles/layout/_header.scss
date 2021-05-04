@@ -1,0 +1,43 @@
+.header {
+    font-weight: bold;
+    color: $text-heading;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $bg;
+    z-index: 20;
+    &-nav { 
+        @include flexbox (center, space-between)
+    }
+    &-img {
+        font-size: 40px;
+        cursor: pointer;
+    }
+    &-menu {
+        display: flex;
+    }
+    &-link {
+        padding : 5px 15px;
+        color : $text-heading;
+        transition: all 0.3s ease;
+        &:hover {
+            color : $red;
+        }
+    }
+    @include maxWidth (767px) {
+        padding : 15px 0;
+        &-menu {
+            display: none;
+        }
+        &-img {
+            font-size: 30px;
+        }
+    }
+    @include maxWidth (425px) {
+        &-img {
+            font-size: 25px;
+        }
+    }
+}

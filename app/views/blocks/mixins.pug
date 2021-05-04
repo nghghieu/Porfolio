@@ -1,0 +1,37 @@
+mixin headerItem(href ='#', name = 'Home')
+    li.header-item 
+        a.header-link(href=href)= name
+
+mixin headingText(text = "about")
+    h2.about-heading.text-heading
+        span=text
+
+mixin aboutInfo(title = "Name:", desc= "Hieu Nguyen")
+    .about-info-item
+        p.about-info-title=title
+        p.about-info-desc=desc 
+
+mixin resumeItem(time = "2016 - Present", text="2016 - Present", desc="Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.")
+    .resume-item
+        span.resume-item-time=time
+        h4.resume-item-text=text
+        p.resume-item-desc=desc 
+
+mixin worklistItem(name ="All",href="")
+    li.work-list-item
+        a.work-list-link(href=href)=name
+
+mixin workItem(src ="../images/fylodark.jpg",text ="My Work",href = "#", alt="")
+    .work-item
+        img(src=src atl=alt)
+        .work-overlay 
+            h4.work-overlay-text=text
+            a.work-overlay-link(href=href, target="_blank")
+                i.fa.fa-link
+
+mixin contactItem( icon = "far fa-envelope", desc = "nguyenhoanghieu0312@gmail.com", href="#")
+    .contact-item
+        .contact-item-box
+            a(href=href).contact-item-icon
+                i(class=icon)
+        span.contact-desc=desc 

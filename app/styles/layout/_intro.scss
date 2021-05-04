@@ -1,0 +1,43 @@
+.intro{
+    padding-top : 245px;
+    height: 767px;
+    text-align: center;
+    color: $text-heading;
+    background: url("https://images.unsplash.com/photo-1487452066049-a710f7296400?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80") no-repeat center / cover;
+    // clip-path: polygon(0px 0px, 100% 0%, 100% 80%, 50% 100%, 0px 80%);
+    &-content {
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+        @include flexboxCenterCol;
+    }
+    &-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 24px;
+    }
+    &-name {
+        margin-bottom: 5px;
+        font-size: 36px;
+        font-weight: bold;
+        color: $white;
+    }
+    &-job {
+        color: $white;
+    }
+    &-button {
+       margin-top : 24px
+    }
+    @include maxWidth (425px) {
+        padding-top: 160px;
+        &-image {
+            width: 120px;
+            height: 120px;
+        }
+        &-name {
+            font-size: 25px;
+        }
+    }
+}   

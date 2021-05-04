@@ -1,0 +1,19 @@
+section.about
+    .container
+        .about-container
+            +headingText("About Me")
+            .about-box
+                img.about-image(src="./images/author.JPG" alt="")
+                .about-content
+                    h6.about-title I'm 
+                        span Hieu
+                    p.about-desc A newbie of Front-end but I always trying be better.
+                    .about-info
+                        +aboutInfo
+                        +aboutInfo("Age:","23")
+                        +aboutInfo("From:","Da Nang")
+                        +aboutInfo("Skills:","Html, CSS, Jarvascript, Pug, Sass")
+                        +aboutInfo("Languages :","Vietnamese , English")
+                    a.about-button.button(href="#") Download CV
+
+

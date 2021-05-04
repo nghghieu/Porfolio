@@ -1,0 +1,13 @@
+.button {
+    max-width: 175px;
+    padding : 12px 32px;
+    background-color: $red;
+    border-radius: 50px;
+    color: $white;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-weight : bold;
+    &:hover {
+        transform : scale(0.8);
+    }
+}

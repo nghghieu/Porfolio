@@ -1,0 +1,83 @@
+.work {
+    padding : 110px 0  0 0;
+    &-list {
+        display: flex;
+    }
+    &-list-item {
+        margin-right: 20px; 
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    &-list-link {
+        transition : all .3s ease-in-out;
+        font-weight: 600;
+        &:hover, &:active {
+            color : $red;
+        }
+    }
+    &-content {
+        @include flexbox ;
+        flex-wrap: wrap;
+    }
+    &-item {
+        width: calc(33.33% - 25px);
+        margin-right : 25px;  
+        box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.191);
+        position: relative;
+        border-radius : 20px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        overflow: hidden;
+        > img {
+            object-fit: cover;
+            border-radius : 20px;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    &-overlay {
+        @include absoluteCenter();
+        @include size(100%);
+        border-radius : 20px;
+        background-color: rgba($red,0.9);
+        color: white;
+        @include flexbox(center,center, column);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease-in-out;
+        &-text {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        &-link {
+            @include size(50px);
+            @include flexbox(center,center);
+            @include posistionB-L(20px,20px);
+            padding : 10px;
+            border-radius: 50%;
+            background-color: $yellow;
+            color : white;
+        }
+    }
+    &-item:hover &-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    &-item:hover img {
+        transform: scale(1.1);
+    }
+    @include maxWidth ( 1024px) {
+        &-item {
+            width: calc(50% - 25px);
+        }
+    }
+    @include maxWidth (425px) {
+        &-item {
+            width: 100%;
+            margin-right : 0;  
+            margin-bottom: 30px;
+        }
+        &-list-item {
+            font-size: 15px;
+        }
+    }
+}
