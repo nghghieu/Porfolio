@@ -11,8 +11,15 @@ mixin aboutInfo(title = "Name:", desc= "Hieu Nguyen")
         p.about-info-title=title
         p.about-info-desc=desc 
 
-mixin resumeItem(time = "2016 - Present", text="2016 - Present", desc="Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.")
+mixin resumeItemLeft(time = "2016 - Present", text="2016 - Present", desc="Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.")
     .resume-item
+        i.fas.fa-graduation-cap
+        span.resume-item-time=time
+        h4.resume-item-text=text
+        p.resume-item-desc=desc 
+mixin resumeItemRight(time = "2016 - Present", text="2016 - Present", desc="Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.")
+    .resume-item
+        i.fas.fa-briefcase
         span.resume-item-time=time
         h4.resume-item-text=text
         p.resume-item-desc=desc 
