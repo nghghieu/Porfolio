@@ -49,6 +49,7 @@
     }
     @include maxWidth (767px) {
         text-overflow: ellipsis;
+        padding : 50px 0 0 0;
         &-box { 
             @include flexbox (center,space-between,column);
             height: auto;

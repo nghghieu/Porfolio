@@ -1,11 +1,7 @@
 .resume {
     padding : 110px 0 0 0 ;
     &-container {
-        display: flex;
-        @include maxWidth (767px) {
-            display: block;
-            font-size: 14px;
-        }
+        display: flex;       
     }
     &-left, &-right {
         width: calc(50% - 20px);
@@ -14,43 +10,33 @@
         background-color: $white;
         margin-bottom: 30px;
         box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.191);
-        @include maxWidth (767px) {
-            width: 100%;
-        }
     }
     &-left {
         margin-right: 20px;
         .resume-item {
-            &::after {
-                content: "";
-                background: #FFF;
-                font-family: "simple-line-icons";
-                font-size: 24px;
+            .fa-graduation-cap {
+                @include posistionT-L(0,0);
+                background-color: #fff;
+                z-index: 2;
+                font-size: 20px;
                 color: #FF4C60;
-                position: absolute;
-                left: 0;
-                top: 0;
-                z-index: 1;
+                @include size (30px, 25px);
             }
         }
-    }
+        }
     &-right {
         margin-right: 20px;
         .resume-item {
-            &::after {
-                content: "";
-                background: #FFF;
-                font-family: "simple-line-icons";
-                font-size: 24px;
+            .fa-briefcase {
+                @include posistionT-L(0,0);
+                background-color: #FFF;
+                z-index: 2;
+                font-size: 20px;
                 color: #FF4C60;
-                position: absolute;
-                left: 0;
-                top: 0;
-                z-index: 1;
+                @include size (30px, 25px);
+            }
             }
         }
-    }
-
     &-title {
         font-size: 24px;
         font-weight: 600;
@@ -81,5 +67,14 @@
             font-weight: bold;
         }
     }
-    
+    @include maxWidth (767px) {
+        padding : 50px 0 0 0;
+        &-container {
+            display: block;
+            font-size: 14px;
+        }
+        &-left, &-right { 
+            width: 100%;
+        }
+    }
 }

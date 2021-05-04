@@ -9,8 +9,6 @@
         rgba(0, 0, 0, 0.5)
         ),
         url("../images/bgimage.jpg") no-repeat center / cover ;
-    // background-image:  url("../images/bgimage.jpg") ;
-    // clip-path: polygon(0px 0px, 100% 0%, 100% 80%, 50% 100%, 0px 80%);
     &-content {
         max-width: 400px;
         height: auto;
@@ -38,6 +36,8 @@
     }
     @include maxWidth (425px) {
         padding-top: 160px;
+        height: 550px;
+        clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
         &-image {
             width: 120px;
             height: 120px;

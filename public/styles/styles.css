@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
@@ -163,7 +162,10 @@ img {
     margin-top: 24px; }
   @media screen and (max-width: 425px) {
     .intro {
-      padding-top: 160px; }
+      padding-top: 160px;
+      height: 550px;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
+      clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%); }
       .intro-image {
         width: 120px;
         height: 120px; }
@@ -232,7 +234,8 @@ img {
       min-width: 90px; }
   @media screen and (max-width: 767px) {
     .about {
-      text-overflow: ellipsis; }
+      text-overflow: ellipsis;
+      padding: 50px 0 0 0; }
       .about-box {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -272,10 +275,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    @media screen and (max-width: 767px) {
-      .resume-container {
-        display: block;
-        font-size: 14px; } }
   .resume-left, .resume-right {
     width: calc(50% - 20px);
     padding: 30px 30px 15px 30px;
@@ -284,33 +283,30 @@ img {
     margin-bottom: 30px;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.191);
     box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.191); }
-    @media screen and (max-width: 767px) {
-      .resume-left, .resume-right {
-        width: 100%; } }
   .resume-left {
     margin-right: 20px; }
-    .resume-left .resume-item::after {
-      content: "";
-      background: #FFF;
-      font-family: "simple-line-icons";
-      font-size: 24px;
-      color: #FF4C60;
+    .resume-left .resume-item .fa-graduation-cap {
       position: absolute;
-      left: 0;
       top: 0;
-      z-index: 1; }
+      left: 0;
+      background-color: #fff;
+      z-index: 2;
+      font-size: 20px;
+      color: #FF4C60;
+      width: 30px;
+      height: 25px; }
   .resume-right {
     margin-right: 20px; }
-    .resume-right .resume-item::after {
-      content: "";
-      background: #FFF;
-      font-family: "simple-line-icons";
-      font-size: 24px;
-      color: #FF4C60;
+    .resume-right .resume-item .fa-briefcase {
       position: absolute;
-      left: 0;
       top: 0;
-      z-index: 1; }
+      left: 0;
+      background-color: #FFF;
+      z-index: 2;
+      font-size: 20px;
+      color: #FF4C60;
+      width: 30px;
+      height: 25px; }
   .resume-title {
     font-size: 24px;
     font-weight: 600;
@@ -350,6 +346,14 @@ img {
       font-size: 20px;
       margin: 5px 0;
       font-weight: bold; }
+  @media screen and (max-width: 767px) {
+    .resume {
+      padding: 50px 0 0 0; }
+      .resume-container {
+        display: block;
+        font-size: 14px; }
+      .resume-left, .resume-right {
+        width: 100%; } }
 
 .work {
   padding: 110px 0  0 0; }
@@ -468,6 +472,9 @@ img {
   @media screen and (max-width: 1024px) {
     .work-item {
       width: calc(50% - 25px); } }
+  @media screen and (max-width: 767px) {
+    .work {
+      padding: 50px 0 0 0; } }
   @media screen and (max-width: 425px) {
     .work-item {
       width: 100%;
@@ -535,15 +542,17 @@ img {
     .contact-desc {
       font-size: 15px; } }
   @media screen and (max-width: 768px) {
-    .contact-item {
-      width: 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .contact-desc {
-      padding-top: 20px;
-      font-size: 14px; } }
+    .contact {
+      padding: 50px 0 0 0; }
+      .contact-item {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      .contact-desc {
+        padding-top: 20px;
+        font-size: 14px; } }
 
 .button {
   max-width: 175px;
