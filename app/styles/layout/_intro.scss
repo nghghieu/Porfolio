@@ -1,6 +1,6 @@
 .intro{
-    padding-top : 245px;
-    height: 767px;
+    padding-top : 350px;
+    height: 947px;
     text-align: center;
     color: $text-heading;
     background: linear-gradient(
@@ -34,9 +34,13 @@
     &-button {
        margin-top : 24px
     }
+    @include maxWidth (768px) {
+        padding-top: 300px;
+        height: 836px;
+    }
     @include maxWidth (425px) {
-        padding-top: 160px;
-        height: 550px;
+        padding-top: 200px;
+        height: 675px;
         clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
         &-image {
             width: 120px;

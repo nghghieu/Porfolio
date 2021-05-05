@@ -67,7 +67,7 @@
             font-weight: bold;
         }
     }
-    @include maxWidth (767px) {
+    @include maxWidth (768px) {
         padding : 50px 0 0 0;
         &-container {
             display: block;

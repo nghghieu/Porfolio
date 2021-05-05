@@ -121,8 +121,8 @@ img {
       font-size: 25px; } }
 
 .intro {
-  padding-top: 245px;
-  height: 767px;
+  padding-top: 350px;
+  height: 947px;
   text-align: center;
   color: #454360;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/bgimage.jpg") no-repeat center/cover;
@@ -160,10 +160,14 @@ img {
     color: #fff; }
   .intro-button {
     margin-top: 24px; }
+  @media screen and (max-width: 768px) {
+    .intro {
+      padding-top: 300px;
+      height: 836px; } }
   @media screen and (max-width: 425px) {
     .intro {
-      padding-top: 160px;
-      height: 550px;
+      padding-top: 200px;
+      height: 675px;
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
       clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%); }
       .intro-image {
@@ -346,7 +350,7 @@ img {
       font-size: 20px;
       margin: 5px 0;
       font-weight: bold; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .resume {
       padding: 50px 0 0 0; }
       .resume-container {
@@ -392,6 +396,8 @@ img {
   .work-item {
     width: calc(33.33% - 25px);
     margin-right: 25px;
+    height: 268px;
+    background-color: #fff;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.191);
     box-shadow: 0px 5px 10px 0px rgba(126, 118, 118, 0.191);
     position: relative;
