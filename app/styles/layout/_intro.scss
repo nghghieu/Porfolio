@@ -40,7 +40,7 @@
     }
     @include maxWidth (425px) {
         padding-top: 200px;
-        height: 675px;
+        height: 645px;
         clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
         &-image {
             width: 120px;
