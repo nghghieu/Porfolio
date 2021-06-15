@@ -1,53 +1,49 @@
-.intro{
-    padding-top : 350px;
-    height: 947px;
-    text-align: center;
-    color: $text-heading;
-    background: linear-gradient(
-        to bottom ,  
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-        ),
-        url("../images/bgimage.jpg") no-repeat center / cover ;
-    &-content {
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto;
-        @include flexboxCenterCol;
-    }
+.intro {
+  padding-top: 350px;
+  height: 947px;
+  text-align: center;
+  color: $text-heading;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/bgimage.jpg") no-repeat center / cover;
+  &-content {
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    @include flexboxCenterCol;
+  }
+  &-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 24px;
+  }
+  &-name {
+    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    color: $white;
+  }
+  &-job {
+    color: $white;
+  }
+  &-button {
+    margin-top: 24px;
+  }
+  @include maxWidth(768px) {
+    padding-top: 300px;
+    height: 836px;
+  }
+  @include maxWidth(425px) {
+    padding-top: 200px;
+    height: 645px;
+    clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
     &-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 24px;
+      width: 120px;
+      height: 120px;
     }
     &-name {
-        margin-bottom: 5px;
-        font-size: 36px;
-        font-weight: bold;
-        color: $white;
+      font-size: 25px;
     }
-    &-job {
-        color: $white;
-    }
-    &-button {
-       margin-top : 24px
-    }
-    @include maxWidth (768px) {
-        padding-top: 300px;
-        height: 836px;
-    }
-    @include maxWidth (425px) {
-        padding-top: 200px;
-        height: 645px;
-        clip-path: polygon(0 0, 100% 0%, 100% 89%, 50% 100%, 0 90%);
-        &-image {
-            width: 120px;
-            height: 120px;
-        }
-        &-name {
-            font-size: 25px;
-        }
-    }
-}   
+  }
+}
